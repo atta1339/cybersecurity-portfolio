@@ -1,0 +1,16 @@
+<Sysmon schemaversion="4.90">
+  <EventFiltering>
+    <RuleGroup groupRelation="or">
+      <ProcessCreate onmatch="include">
+        <!-- Capture common LOLBins and interpreters -->
+        <Image condition="end with">powershell.exe</Image>
+        <Image condition="end with">cmd.exe</Image>
+        <Image condition="end with">wmic.exe</Image>
+        <Image condition="end with">mshta.exe</Image>
+        <Image condition="end with">certutil.exe</Image>
+        <Image condition="end with">cscript.exe</Image>
+        <Image condition="end with">wscript.exe</Image>
+      </ProcessCreate>
+    </RuleGroup>
+  </EventFiltering>
+</Sysmon>
