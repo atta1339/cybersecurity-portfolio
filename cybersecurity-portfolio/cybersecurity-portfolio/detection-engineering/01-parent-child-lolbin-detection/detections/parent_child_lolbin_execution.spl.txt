@@ -1,0 +1,14 @@
+/*
+  Title: Suspicious Parent-Child Process Execution (LOLBins)
+  ATT&CK: T1059 (Command & Scripting Interpreter), T1036 (Masquerading)
+  Severity: High
+*/
+
+index=* EventID=1
+| eval ParentProcess=mvindex(split(ParentImage, "\\"), -1),
+       ChildProcess=mvindex(split(Image, "\\"), -1)
+| where match(ParentProcess, "(?i)(winword\.exe|excel\.exe|powerpnt\.exe|outlook\.exe|chrome\.exe|msedge\.exe|acrord32\.exe)")
+  AND match(ChildProcess, "(?i)(powershell\.exe|cmd\.exe|wmic\.exe|mshta\.exe|certutil\.exe|cscript\.exe|wscript\.exe)")
+| eval RiskLevel=if(match(CommandLine, "(?i)(-e|-enc|-encodedcommand|bypass|-nop|-noni|downloadstring|iex)"), "High (Encoded/Evasive Flag)", "Medium (Unusual Parent-Child Execution)")
+| stats count min(_time) as first_seen max(_time) as last_seen by Computer User ParentProcess ChildProcess CommandLine RiskLevel
+| convert ctime(first_seen) ctime(last_seen)
