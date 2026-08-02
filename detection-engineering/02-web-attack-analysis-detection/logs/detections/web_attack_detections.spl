@@ -1,0 +1,28 @@
+===================================================================
+Detection Query 1: SQL Injection (SQLi) Detection
+Target: Identifies decoded URL patterns matching common SQLi strings.
+===================================================================
+index=web_logs sourcetype=access_combined
+| eval uri_decoded=urldecode(uri_path)
+| regex uri_decoded="(?i)(union\s+select|select\s+.*\s+from|or\s+1=1|--|drop\s+table)"
+| stats count by src_ip, uri_decoded, status, useragent
+| sort - count
+
+===================================================================
+Detection Query 2: Path Traversal / Local File Inclusion (LFI)
+Target: Identifies attempts to escape web directories or target system files.
+===================================================================
+index=web_logs sourcetype=access_combined
+| eval uri_decoded=urldecode(uri_path)
+| regex uri_decoded="(?i)(\.\.\/|\.\.\\|etc\/passwd|win\.ini)"
+| stats count by src_ip, uri_decoded, status
+| sort - count
+
+===================================================================
+Detection Query 3: Automated Web Vulnerability Scanner Detection
+Target: Identifies high-frequency failed HTTP requests and known scanner User-Agents.
+===================================================================
+index=web_logs sourcetype=access_combined status>=400
+| stats count as failed_requests, count(eval(status=404)) as count_404 by src_ip, useragent
+| where failed_requests > 3 or match(useragent, "(?i)(nikto|gobuster|acunetix|sqlmap)")
+| sort - failed_requests
