@@ -36,3 +36,5 @@ index=web_logs sourcetype=access_combined status>=400
 | stats count as failed_requests, count(eval(status=404)) as count_404 by src_ip, useragent
 | where failed_requests > 3 or match(useragent, "(?i)(nikto|gobuster|acunetix|sqlmap)")
 | sort - failed_requests
+### 📸 Detection Proof
+![Splunk SQLi Detection Proof](./assets/splunk_sqli_detection.png)
