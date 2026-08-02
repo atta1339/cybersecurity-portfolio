@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Portfolio</title>
+    <style>
+        :root { --bg: #0d1117; --card: #161b22; --text: #c9d1d9; --accent: #58a6ff; --neon: #238636; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 0; }
+        header { text-align: center; padding: 4rem 2rem; background: radial-gradient(circle at top, #1f2937, var(--bg)); }
+        h1 { margin: 0; color: #fff; font-size: 2.5rem; }
+        .subtitle { color: var(--accent); font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+        section { margin-bottom: 3rem; }
+        h2 { border-bottom: 1px solid #21262d; padding-bottom: 0.5rem; color: #fff; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+        .card { background: var(--card); border: 1px solid #30363d; border-radius: 6px; padding: 1.5rem; }
+        .card h3 { margin-top: 0; color: #fff; }
+        .badge { background: #21262d; color: var(--accent); padding: 0.3rem 0.6rem; border-radius: 20px; font-size: 0.85rem; display: inline-block; margin-right: 0.5rem; margin-top: 0.5rem; }
+        footer { text-align: center; padding: 2rem; color: #8b949e; font-size: 0.9rem; border-top: 1px solid #21262d; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cybersecurity Portfolio</h1>
+        <p class="subtitle">Security Analyst & Threat Hunter</p>
+        <p>Passionate about securing networks, analyzing malware, and incident response.</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Core Technical Skills</h2>
+            <div class="card">
+                <span class="badge">SIEM (Splunk, ELK)</span>
+                <span class="badge">Wireshark & Network Analysis</span>
+                <span class="badge">Linux & Bash Scripting</span>
+                <span class="badge">Incident Response</span>
+                <span class="badge">Vulnerability Assessment</span>
+                <span class="badge">Python for Security</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>SOC Automation Lab</h3>
+                    <p>Configured an open-source SIEM stack to parse honeypot logs and trigger automated alerts for brute-force SSH attacks.</p>
+                </div>
+                <div class="card">
+                    <h3>Malware Analysis Sandbox</h3>
+                    <p>Built a secure, isolated environment to perform static and dynamic analysis of mock ransomware samples.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Cybersecurity Portfolio | Powered by GitHub Pages</p>
+    </footer>
+
+</body>
+</html>
