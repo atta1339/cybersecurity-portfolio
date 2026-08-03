@@ -26,7 +26,7 @@
     <header>
         <h1>Cybersecurity Portfolio</h1>
         <p class="subtitle">Security Analyst & Threat Hunter</p>
-        <p>Passionate about securing networks, analyzing malware, and incident response.</p>
+        <p>Passionate about securing networks, analysing malware, and incident response.</p>
     </header>
 
     <div class="container">
@@ -53,7 +53,40 @@
                     <h3>Malware Analysis Sandbox</h3>
                     <p>Built a secure, isolated environment to perform static and dynamic analysis of mock ransomware samples.</p>
                 </div>
-            </div>
+           <div class="card">
+    <h3>03 - Authentication & Identity Threat Detection</h3>
+    <p>Monitors Windows Event IDs (4625 & 4624) using Splunk SPL to catch Brute Force attacks and Pass-the-Hash misuse.</p>
+    
+    <p style="font-weight: bold; margin-top: 10px; margin-bottom: 5px;">Detection Output Matrix:</p>
+    <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.8em; border: 1px solid #30363d; background-color: #161b22; color: #c9d1d9;">
+        <thead>
+            <tr style="border-bottom: 1px solid #30363d; background-color: #21262d;">
+                <th style="padding: 4px 6px;">IP Address</th>
+                <th style="padding: 4px 6px;">User</th>
+                <th style="padding: 4px 6px;">Fail</th>
+                <th style="padding: 4px 6px;">Success</th>
+                <th style="padding: 4px 6px;">Alert</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 4px 6px; font-family: monospace;">192.168.1.105</td>
+                <td style="padding: 4px 6px; font-family: monospace;">administrator</td>
+                <td style="padding: 4px 6px; color: #f85149; font-weight: bold;">6</td>
+                <td style="padding: 4px 6px; color: #3fb950; font-weight: bold;">1</td>
+                <td style="padding: 4px 6px;"><span style="background-color: #da3633; color: white; padding: 1px 4px; border-radius: 3px; font-weight: bold;">HIGH</span></td>
+            </tr>
+        </tbody>
+    </table>
+<p style="margin-top: 12px;">
+    <a href="./detection-engineering/03-authentication-identity-detections/" style="color: #58a6ff; text-decoration: underline;">View Full Project & SPL Logic &rarr;</a>
+</p>
+    <p style="margin-top: 12px;">
+    <a href="./detection-engineering/03-authentication-identity-detections/" style="color: #58a6ff; text-decoration: underline;">View Full Project & SPL Logic &rarr;</a>
+</p>
+</div>
+</section>
+</div>
         </section>
     </div>
 
