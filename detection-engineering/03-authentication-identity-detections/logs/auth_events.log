@@ -1,0 +1,8 @@
+2026-08-03 14:10:01 LogName=Security EventCode=4625 TargetUserName="administrator" WorkstationName="WORKSTATION-01" Source_Network_Address="192.168.1.105" FailureReason="Unknown user name or bad password"
+2026-08-03 14:10:02 LogName=Security EventCode=4625 TargetUserName="administrator" WorkstationName="WORKSTATION-01" Source_Network_Address="192.168.1.105" FailureReason="Unknown user name or bad password"
+2026-08-03 14:10:02 LogName=Security EventCode=4625 TargetUserName="administrator" WorkstationName="WORKSTATION-01" Source_Network_Address="192.168.1.105" FailureReason="Unknown user name or bad password"
+2026-08-03 14:10:03 LogName=Security EventCode=4625 TargetUserName="administrator" WorkstationName="WORKSTATION-01" Source_Network_Address="192.168.1.105" FailureReason="Unknown user name or bad password"
+2026-08-03 14:10:04 LogName=Security EventCode=4625 TargetUserName="administrator" WorkstationName="WORKSTATION-01" Source_Network_Address="192.168.1.105" FailureReason="Unknown user name or bad password"
+2026-08-03 14:10:05 LogName=Security EventCode=4625 TargetUserName="administrator" WorkstationName="WORKSTATION-01" Source_Network_Address="192.168.1.105" FailureReason="Unknown user name or bad password"
+2026-08-03 14:10:06 LogName=Security EventCode=4624 TargetUserName="administrator" WorkstationName="WORKSTATION-01" Source_Network_Address="192.168.1.105" Logon_Type=2 Authentication_Package="NTLM"
+2026-08-03 14:15:22 LogName=Security EventCode=4624 TargetUserName="corp_admin" WorkstationName="FINANCE-PC" Source_Network_Address="192.168.1.110" Logon_Type=9 Authentication_Package="NTLM"
