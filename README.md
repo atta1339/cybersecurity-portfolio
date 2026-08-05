@@ -17,3 +17,6 @@ Welcome to my central cybersecurity portfolio repository. This repository showca
 * **Web & Network Telemetry**: Nginx/Apache Web Logs
 * **Threat Frameworks**: MITRE ATT&CK, OWASP Top 10
 * **Documentation & Version Control**: Git, GitHub, Markdown
+| Project | Description | Target Telemetry | Key Focus |
+| :--- | :--- | :--- | :--- |
+| **[04. Hybrid Attack Chain](./04-hybrid-attack-chain)** | Multi-stage correlation linking phishing initial access, obfuscated execution, and scheduled task persistence. | Sysmon (EID 1), PowerShell (EID 4104), Windows Security (EID 4698) | SPL Attack Chain Correlation & Detection Engineering |
