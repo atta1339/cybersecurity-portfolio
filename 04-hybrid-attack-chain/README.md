@@ -36,3 +36,6 @@ By correlating **Sysmon Process Creation**, **PowerShell ScriptBlock Logging**, 
              ▼                                       ▼                                  ▼
    Sysmon Event ID 1                      PowerShell Event ID 4104              Security Event ID 4698
 (Malicious Parent-Child)                  (Obfuscated ScriptBlock)             (Anomalous Task Scheduled)
+| Project | Description | Target Telemetry | Key Focus |
+| :--- | :--- | :--- | :--- |
+| **[04. Hybrid Attack Chain](./04-hybrid-attack-chain)** | Multi-stage correlation linking phishing initial access, obfuscated execution, and scheduled task persistence. | Sysmon (EID 1), PowerShell (EID 4104), Windows Security (EID 4698) | SPL Attack Chain Correlation & Detection Engineering |
